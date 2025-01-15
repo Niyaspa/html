@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>ON MOUSE CLICK</title>
+
+    <style>
+        button
+        {
+            width:100px;
+            height:100px; 
+            font-size:larger; 
+            border-radius:50px; 
+            background-color:green;
+            color:yellow;
+        }
+    </style>
+
+    <script>
+        const color = ["red", "orange", "yellow", "violet", "green","blue","lightblue","brown","white","black","lightgreen","darkred","pink","purple"];
+        let currcolor = 0;
+        function changebgcolor() 
+        {
+            currcolor = (currcolor + 1) % color.length;
+            document.body.style.backgroundColor = color[currcolor];
+        }
+    </script>
+
+</head>
+
+<body style="text-align:center;">
+    <h1>Click the button below to change the background colour</h1><br>
+    <button type="button" onclick="changebgcolor()">
+        Change colour</button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>ON MOUSE OVER</title>
+
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+            font-size: larger;
+            border-radius: 50px;
+            background-color:lightcoral;
+            color:black;
+        }
+    </style>
+
+    <script>
+        function changeImageAndText() {
+            document.body.style.backgroundImage = "url('templates/prog8.jpg')"; 
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            document.querySelector('h1').innerText = "Image Loaded!";
+        }
+
+        function resetImageAndText() {
+            document.body.style.backgroundImage = "none";
+            document.querySelector('h1').innerText = "Click the button below to change the background Image and this text";
+        }
+    </script>
+
+</head>
+
+<body style="text-align:center;">
+    <h1>Click the button below to change the background Image and this text</h1><br>
+    <button type="button" onmouseover="changeImageAndText()" onmouseout="resetImageAndText()">
+        Change Image and Text</button>
+
+
+</body>
+
+</html>
